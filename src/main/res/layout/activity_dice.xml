@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tian.gamecollection.activity.DiceActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:id="@+id/dice_plus_btn"
+        android:scrollbarSize="@dimen/text_margin"
+        app:backgroundTint="@color/dice_float_bg_color" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_delete"
+        android:id="@+id/dice_minus_btn"
+        app:fabSize="mini"
+        app:backgroundTint="@color/dice_float_bg_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dice_content_layout"
+        android:background="@color/dice_activity_bg_color">
+
+        <TextView
+            android:id="@+id/dice_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/dice_change_tip"
+            android:visibility="visible"
+            android:onClick="onChangeMode"
+            android:focusable="true"
+            android:enabled="true"/>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
